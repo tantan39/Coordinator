@@ -16,7 +16,7 @@ class LoginVC: UIViewController {
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        coordinator?.finish()
+//        coordinator?.finish()
     }
     
     @IBAction func btnReset_Pressed(_ sender: Any) {

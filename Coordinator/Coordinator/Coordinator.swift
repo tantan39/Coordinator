@@ -26,7 +26,7 @@ extension Coordinator {
     }
 }
 
-class MainCoordinator: Coordinator {
+class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
     var navController: UINavigationController
     var childCoordinators: [Coordinator] = []
     
@@ -35,6 +35,7 @@ class MainCoordinator: Coordinator {
     }
     
     func start() {
+        navController.delegate = self
         let vc = ViewController.initiateFromStoryboard()
         vc.coordinator = self
         navController.setViewControllers([vc], animated: true)
@@ -50,5 +51,15 @@ class MainCoordinator: Coordinator {
     func showRegister() {
         let register = RegisterVC.initiateFromStoryboard()
         navController.pushViewController(register, animated: true)
+    }
+    
+    func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
+        guard let fromViewController = navigationController.transitionCoordinator?.viewController(forKey: .from) else { return }
+        if navigationController.viewControllers.contains(fromViewController) {
+            return
+        }
+        if let viewController = fromViewController as? LoginVC {
+            removeCoordinatorFromParents(viewController.coordinator!)
+        }
     }
 }
