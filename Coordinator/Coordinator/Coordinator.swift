@@ -15,6 +15,7 @@ protocol Coordinator: AnyObject {
 }
 
 extension Coordinator {
+    // Remove child coordinator out of array
     func removeCoordinatorFromParents(_ coordinator: Coordinator) {
         for (index, item) in childCoordinators.enumerated() {
             if item === coordinator {
