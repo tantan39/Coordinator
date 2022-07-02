@@ -23,6 +23,18 @@ class MainCoordinator: Coordinator {
     }
     
     func start() {
-        
+        let vc = ViewController.initiateFromStoryboard()
+        vc.coordinator = self
+        navController.setViewControllers([vc], animated: true)
+    }
+    
+    func showLogin() {
+        let loginVC = LoginVC.initiateFromStoryboard()
+        navController.pushViewController(loginVC, animated: true)
+    }
+    
+    func showRegister() {
+        let register = RegisterVC.initiateFromStoryboard()
+        navController.pushViewController(register, animated: true)
     }
 }
