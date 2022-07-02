@@ -17,6 +17,8 @@
 		B4E8E6512870A12300A6B33F /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E8E6502870A12300A6B33F /* LoginVC.swift */; };
 		B4E8E6532870A16200A6B33F /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E8E6522870A16200A6B33F /* RegisterVC.swift */; };
 		B4E8E6552870A22A00A6B33F /* ViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E8E6542870A22A00A6B33F /* ViewController+Extension.swift */; };
+		B4E8E6572870A63900A6B33F /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E8E6562870A63900A6B33F /* LoginCoordinator.swift */; };
+		B4E8E6592870A7B800A6B33F /* ResetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E8E6582870A7B800A6B33F /* ResetVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		B4E8E6502870A12300A6B33F /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		B4E8E6522870A16200A6B33F /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		B4E8E6542870A22A00A6B33F /* ViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extension.swift"; sourceTree = "<group>"; };
+		B4E8E6562870A63900A6B33F /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		B4E8E6582870A7B800A6B33F /* ResetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,7 @@
 				B4E8E6542870A22A00A6B33F /* ViewController+Extension.swift */,
 				B4E8E64D2870A03500A6B33F /* Coordinator */,
 				B4E8E63D28709F4300A6B33F /* ViewController.swift */,
+				B4E8E6582870A7B800A6B33F /* ResetVC.swift */,
 				B4E8E6502870A12300A6B33F /* LoginVC.swift */,
 				B4E8E6522870A16200A6B33F /* RegisterVC.swift */,
 				B4E8E63F28709F4300A6B33F /* Main.storyboard */,
@@ -83,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				B4E8E64E2870A03F00A6B33F /* Coordinator.swift */,
+				B4E8E6562870A63900A6B33F /* LoginCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -162,8 +168,10 @@
 				B4E8E63E28709F4300A6B33F /* ViewController.swift in Sources */,
 				B4E8E63A28709F4300A6B33F /* AppDelegate.swift in Sources */,
 				B4E8E6552870A22A00A6B33F /* ViewController+Extension.swift in Sources */,
+				B4E8E6592870A7B800A6B33F /* ResetVC.swift in Sources */,
 				B4E8E6532870A16200A6B33F /* RegisterVC.swift in Sources */,
 				B4E8E63C28709F4300A6B33F /* SceneDelegate.swift in Sources */,
+				B4E8E6572870A63900A6B33F /* LoginCoordinator.swift in Sources */,
 				B4E8E6512870A12300A6B33F /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -29,8 +29,9 @@ class MainCoordinator: Coordinator {
     }
     
     func showLogin() {
-        let loginVC = LoginVC.initiateFromStoryboard()
-        navController.pushViewController(loginVC, animated: true)
+        let loginCoordinator = LoginCoordinator(navController: navController)
+        childCoordinators.append(loginCoordinator)
+        loginCoordinator.start()
     }
     
     func showRegister() {
