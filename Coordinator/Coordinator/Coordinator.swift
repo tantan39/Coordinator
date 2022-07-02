@@ -8,10 +8,21 @@
 import Foundation
 import UIKit
 
-protocol Coordinator {
+protocol Coordinator: AnyObject {
     var navController: UINavigationController { get set }
     var childCoordinators: [Coordinator] { get set }
     func start()
+}
+
+extension Coordinator {
+    func removeCoordinatorFromParents(_ coordinator: Coordinator) {
+        for (index, item) in childCoordinators.enumerated() {
+            if item === coordinator {
+                childCoordinators.remove(at: index)
+                break
+            }
+        }
+    }
 }
 
 class MainCoordinator: Coordinator {
@@ -30,6 +41,7 @@ class MainCoordinator: Coordinator {
     
     func showLogin() {
         let loginCoordinator = LoginCoordinator(navController: navController)
+        loginCoordinator.parents = self
         childCoordinators.append(loginCoordinator)
         loginCoordinator.start()
     }

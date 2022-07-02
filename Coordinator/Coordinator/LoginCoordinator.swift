@@ -9,13 +9,17 @@ import Foundation
 import UIKit
 
 class LoginCoordinator: Coordinator {
-    
+    weak var parents: Coordinator?
     var navController: UINavigationController
     
     var childCoordinators: [Coordinator] = []
     
     internal init(navController: UINavigationController) {
         self.navController = navController
+    }
+    
+    deinit {
+        print("Deinit")
     }
     
     func start() {
@@ -27,5 +31,10 @@ class LoginCoordinator: Coordinator {
     func showResetVC() {
         let vc = ResetVC.initiateFromStoryboard()
         navController.pushViewController(vc, animated: true)
+    }
+    
+    func finish() {
+        
+        parents?.removeCoordinatorFromParents(self)
     }
 }
